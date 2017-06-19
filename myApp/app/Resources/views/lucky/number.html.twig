@@ -1,0 +1,7 @@
+{# app/Resources/views/lucky/number.html.twig #}
+
+<h1>Your lucky number is {{ number|price(2, ',', '.') }}</h1>
+
+{% for n in numbers %}
+{{ n }}
+{% endfor %}
