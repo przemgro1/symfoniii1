@@ -6,6 +6,9 @@ framework:
         resource: '%kernel.project_dir%/app/config/routing_dev.yml'
         strict_requirements: true
     profiler: { only_exceptions: false }
+    translator: { fallbacks: [en] }
+
+
 
 web_profiler:
     toolbar: true
@@ -51,3 +54,11 @@ doctrine:
         default_table_options:
             charset: utf8mb4
             collate: utf8mb4_unicode_ci
+
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
